@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2C3A47;  /* Deep slate blue-gray */
+  background-image: linear-gradient(45deg, #2C3A47 0%, #1e272e 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  padding: 20px 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 2px, transparent 2px);
+  background-size: 30px 30px;
+  z-index: -1;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+  margin: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.dice:hover {
+  transform: translateY(-5px);
+}
+
+h1 {
+  margin: 30px;
+  font-family: 'Lobster', cursive;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  font-size: 8rem;
+  color: #E58E26;  /* Golden amber color */
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 2.2rem;
+  color: #EAB543;  /* Lighter amber for player names */
+  font-family: 'Indie Flower', cursive;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  width: 80%;
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+  transition: all 0.3s;
+}
+
+img:hover {
+  transform: rotate(5deg);
+}
+
+footer {
+  margin-top: 5%;
+  color: #a5b1c2;  /* Soft blue-gray */
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.roll-btn {
+  margin-top: 50px;
+  padding: 15px 40px;
+  font-size: 1.5rem;
+  font-family: 'Indie Flower', cursive;
+  background-color: #E58E26;  /* Match heading color */
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.roll-btn:hover {
+  background-color: #F19953;  /* Slightly lighter on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.roll-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes diceRoll {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.7;
+  }
+  25% {
+    transform: rotate(15deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(-10deg) scale(0.95);
+  }
+  75% {
+    transform: rotate(5deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.dice-animation {
+  animation: diceRoll 0.5s ease-in-out;
+}
