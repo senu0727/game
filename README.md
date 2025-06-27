@@ -31,8 +31,8 @@ A fun and interactive dice rolling game built with vanilla HTML, CSS, and JavaSc
 
 ## 📸 Screenshots
 
-![Game Screenshot](https://via.placeholder.com/800x400/2C3A47/E58E26?text=Dicee+Game+Screenshot)
-*Add actual screenshots of your game here*
+![Game Screenshot](preview.png)
+
 
 ## 🛠️ Technologies Used
 
